@@ -33,3 +33,5 @@ if ( Test-Path $gitAttributes -eq $False ) {
 $fileExtensions.Split(",") | ForEach-Object {
     Write-Host "$_" >> $gitAttributes
 }
+
+Write-Host $template >> $gitConfig
