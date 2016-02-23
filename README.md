@@ -11,7 +11,7 @@ Options are
 1. project path (required);
 2. file extensions (required);
 ```powershell
-> .\setup-keywords.ps1 c:\project .cs,.js,.html
+> .\setup-keywords.ps1 -projectPath c:\project -fileExtensions cs-js-html
 ```
 
 It gonna download the files and sets up the project for parse the following keywords:
