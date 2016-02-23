@@ -7,8 +7,6 @@ Param(
 )
 
 PROCESS {
-    New-Item -ItemType Directory -Force -Path $gitKeywords
-
     Write-Host "[1] - Setting up for $projectPath and files with $fileExtensions"
         [string]  $template         ="[filter `"rcs-keywords`"]
     smudge= .gitkeywords/rcs.smudge.ps1
@@ -22,6 +20,7 @@ PROCESS {
             "https://raw.githubusercontent.com/barbatchov/powershell-git-keywords/master/rcs.smudge.ps1"
             "https://raw.githubusercontent.com/barbatchov/powershell-git-keywords/master/rcs.clean.ps1"
         )
+        New-Item -ItemType Directory -Force -Path $gitKeywords
 
     Write-Host "[2] - Downloading files..."
 
